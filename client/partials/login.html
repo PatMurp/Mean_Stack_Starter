@@ -1,0 +1,26 @@
+<div class="main">
+	<div class="wrapper">
+		<div id="login" class="row" style="margin: auto"><br>
+			
+			<form name="form" ng-submit="login(form)" >
+				<div class="large-12 columns text-center"><br>
+					
+						<h4 class="text-center">Login</h4>
+				    <input type="text" name="email"  ng-model="user.email" placeholder="Email:" required  />
+				   
+			  
+			    	<input type="password" name="password" ng-model="user.password" placeholder="Password:"required />
+			    
+			    <ul class="button-group radius" style="width: 100%">
+			    	<li type="submit" class="button medium" style="width: 135px" ng-disabled="form.$invalid">Log in</li>
+			    	<li><a href="#/signup" class="button medium" style="width: 135px">Sign up</a></li>
+			    </ul>
+
+				 </div>
+			</form>
+			
+		</div>
+	</div>
+</div>
+
+

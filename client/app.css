@@ -1,0 +1,67 @@
+.main {
+	height: 100%;
+	width: 100%;
+	display: table;
+}
+
+.wrapper {
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#login {
+	width: 30%;
+}
+
+@media all and (max-width:650px) {
+	#login {
+		width: 90%;
+	}
+}
+
+#login input[type="text"], #login input[type="password"], #login input[type="email"],
+#login input[type="number"], #login select, #login input[type="date"]{
+    margin: 0px;
+    height: 50px;
+}
+
+#eventForm input[type="text"], #eventForm input[type="password"], #eventForm input[type="time"],
+#eventForm input[type="number"], #eventForm select, #eventForm input[type="date"]{
+    margin: 0px;
+    height: 50px;
+}
+
+.border-radius-top {
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: 0px !important;
+}
+
+
+.border-radius-bottom {
+    -webkit-border-bottom-right-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+/* validation error message style*/
+.error {
+    color: red;
+    font-weight: bold;
+}
+
+
+/* flash message style*/
+.success {
+    color: green;
+    font-weight: bold;
+}
+
