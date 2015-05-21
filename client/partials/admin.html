@@ -1,0 +1,22 @@
+<div ng-controller="NavCtrl" ng-show="isLoggedIn()">
+	<h3 class="success">Welcome {{ currentUser() }} you are logged in.</h3>
+	<div class="medium-4 columns">
+		<table>
+			<caption>Admin Users</caption>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>User name</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody ng-repeat=" user in adminUsers">
+				<tr>
+					<td>{{ user.name }}</td>
+					<td>{{ user.username }}</td>
+					<td><a ng-really-message="Are you sure" ng-really-click="removeAdminUser(user)" class="error">Delete</a></td>
+				</tr>
+			</tbody>
+		</table>	
+	</div>
+</div>

@@ -11,3 +11,4 @@ $ bower install
 $ mongod
 
 $ node app.js
+

@@ -11,7 +11,7 @@
  <body>
  	<!-- Foundation responsive Navbar -->
  	<div class="sticky">
- 		<nav class="top-bar" data-topbar>
+ 		<nav class="top-bar" data-topbar ng-controller="NavCtrl">
  			<ul class="title-area">
  				<li class="name">
  					<h1><a href="#/">Starter App</a></h1>
@@ -20,25 +20,30 @@
  			</ul>
  			<section class="top-bar-section">
  				<ul class="right">
+ 					<li ui-sref="home" ui-sref-active="active"><a href="#/">Home</a></li>
  					<li class="divider"></li>
- 					<li class-on-active-link="active"><a href="#/">Home</a></li>
+ 					<li ui-sref="admin" ui-sref-active="active" ng-show="isLoggedIn()"><a href="#/admin">Admin</a></li>
+ 					<li ui-sref="login" ui-sref-active="active" ng-hide="isLoggedIn()"><a href="#/login">Login</a></li>
  					<li class="divider"></li>
- 					<li class-on-active-link="active"><a href="#/login">Login</a></li>
- 					<li class="divider"></li>
- 					<li class-on-active-link="active"><a href="#/signup">Signup</a></li>
+ 					<li ui-sref="register" ui-sref-active="active" ng-hide="isLoggedIn()"><a href="#/signup">Signup</a></li>
+ 					<li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
  				</ul>
  			</section>
  		</nav>
  	</div>
  	<div class="row">
- 		<div ng-view></div>
+ 		<div ui-view></div>
  	</div>
  	<div>
  		<!-- bower.js -->
  		<script src="bower_components/jquery/dist/jquery.min.js"></script>
  		<script src="bower_components/foundation/js/foundation.min.js"></script>
  		<script src="bower_components/angular/angular.min.js"></script>
- 		<script src="bower_components/angular-route/angular-route.min.js"></script>
+ 		<!-- angular libary required for libraries below -->
+ 		<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+ 		<script src="bower_components/angular-foundation-bower/mm-foundation-tpls.min.js"></script>
+ 		<!-- end bower.js -->
+ 		
 
  		<script src="app.js"></script>
  		<!-- initialize foundation javascript -->
@@ -46,7 +51,13 @@
  		$(document).foundation();
  		</script>
 
- 		<script src="directives/navBarClassActive.js"></script>
+ 		
+ 		<script src="factories/auth.factory.js"></script>
+
+ 		<script src="controllers/auth.controller.js"></script>
+ 		<script src="controllers/nav.controller.js"></script>
+ 		<script src="controllers/admin.controller.js"></script>
+
  	</div>	
  </body>
  </html>
