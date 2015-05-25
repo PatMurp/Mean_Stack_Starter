@@ -1,6 +1,16 @@
-##Mean Stack Starter App
+A starter app for MEAN stack built to suit personal preferences. Feel free to clone; additional features and bug fixes will be added as this developer gains more experience with the MEAN stack.
 
-Styling with Foundation 5
+###Features
+
+* Foundation 5 CSS Responsive Design
+* Angular Foundation Library
+* Ui-router
+* Passport Authentication
+* Bower Package Manager
+* Gulp Automation
+
+
+
 
 To run application:
 
@@ -10,5 +20,5 @@ $ bower install
 
 $ mongod
 
-$ node app.js
+$ gulp
 

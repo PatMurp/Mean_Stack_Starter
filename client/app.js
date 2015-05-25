@@ -46,7 +46,7 @@ app.config([
     });
 }]);
 
-// restrict access if user not logged in
+// restrict access if user not logged in 
 app.run(['$rootScope', '$state', 'Auth', function($rootScope, $state, Auth) {
 
 	$rootScope.$on('$stateChangeStart', function(e, toState, toParams, fromState, fromParams) {

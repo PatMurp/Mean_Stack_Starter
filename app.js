@@ -1,6 +1,8 @@
 var express = require('express');
 
-var app = express();
+var app = module.exports.app = exports.app = express();
+app.use(require('connect-livereload')());
+
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/starter-dev')
 var passport = require('passport');

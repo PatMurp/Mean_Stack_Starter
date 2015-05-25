@@ -28,7 +28,7 @@ angular
 			}
 		};
 
-		// return logged in username
+		// return logged in username 
 		auth.currentUser = function() {
 			if(auth.isLoggedIn()) {
 				var token = auth.getToken();

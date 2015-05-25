@@ -7,6 +7,7 @@ var passport = require('passport');
 var jwt = require('express-jwt');
 var auth = jwt({secret: 'SECRET', userProperty: 'payload'});
 
+
 exports.addMiddleware = function(app) {
 	app.use(bodyParser.urlencoded({ extended: false }));
 	app.use(bodyParser.json());
